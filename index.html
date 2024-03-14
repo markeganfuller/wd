@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Wiring Diagrams</title>
+
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+        <meta content="utf-8" http-equiv="encoding"/>
+        <meta name="description" content="Wiring Diagrams"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+            html { height: 100%; }
+            body {
+                color: lightgrey;
+                background: black;
+                font-family: monospace;
+                text-align: center;
+                height: 100%;
+            }
+            .displaydiv {
+                display: flex;
+                justify-content: center;
+            }
+            .tablediv {
+                float: left;
+                padding-right: 1em;
+            }
+            table { table-layout: fixed;
+                border: 0.01em solid grey;
+            }
+            table, th {
+                padding: 0.5em;
+                overflow: wrap;
+            }
+            tr.label {
+                border: 1em solid white;
+                text-align: center;
+            }
+            th.pin{
+                width: 1em;
+                height: 4em;
+                background-color: gold;
+                color: black;
+                font-size:20px;
+                border-left: 1em solid black;
+                border-right: 1em solid black;
+            }
+            td[class^=wire_color_] {
+                overflow: hidden;
+                height: 8em;
+                border-left: 1em solid black;
+                border-right: 1em solid black;
+            }
+            h1, h2 {
+                padding: 0em;
+                margin: 0em;
+            }
+            h1 { display: block; }
+            .wire_color_orange { background-image: linear-gradient(90deg, orange 80%, orange 5%, darkgoldenrod) }
+            .wire_color_green { background-image: linear-gradient(90deg, lime 80%, lime 5%, darkgreen) }
+            .wire_color_blue { background-image: linear-gradient(90deg, blue 80%, blue 5%, darkblue) }
+            .wire_color_brown { background-color: chocolate; }
+            .wire_color_brown { background-image: linear-gradient(90deg, chocolate 80%, chocolate 5%, saddlebrown) }
+            .wire_color_orange_stripe { background-image: repeating-linear-gradient(90deg, white, orange 20%, white 60%) }
+            .wire_color_green_stripe { background-image: repeating-linear-gradient(90deg, white, lime 20%, white 60%) }
+            .wire_color_blue_stripe { background-image: repeating-linear-gradient(90deg, white, blue 20%, white 60%) }
+            .wire_color_brown_stripe { background-image: repeating-linear-gradient(90deg, white, chocolate 20%, white 60%) }
+        </style>
+    </head>
+    <body>
+        <h1>Wiring Diagrams</h1>
+        <div class="displaydiv">
+            <div class="tablediv">
+                <h2>Ethernet T568B</h2>
+                <table>
+                    <tr>
+                        <th>Pin</th>
+                        <th class="pin">1</th>
+                        <th class="pin">2</th>
+                        <th class="pin">3</th>
+                        <th class="pin">4</th>
+                        <th class="pin">5</th>
+                        <th class="pin">6</th>
+                        <th class="pin">7</th>
+                        <th class="pin">8</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">Colour</th>
+                        <td class="wire_color_orange_stripe"></td>
+                        <td class="wire_color_orange"></td>
+                        <td class="wire_color_green_stripe"></td>
+                        <td class="wire_color_blue"></td>
+                        <td class="wire_color_blue_stripe"></td>
+                        <td class="wire_color_green"></td>
+                        <td class="wire_color_brown_stripe"></td>
+                        <td class="wire_color_brown"></td>
+                    </tr>
+                    <tr class="label">
+                        <td>Orange Stripe</td>
+                        <td>Orange</td>
+                        <td>Green Stripe</td>
+                        <td>Blue</td>
+                        <td>Blue Stripe</td>
+                        <td>Green</td>
+                        <td>Brown Stripe</td>
+                        <td>Brown</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
